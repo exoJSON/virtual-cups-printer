@@ -4,9 +4,9 @@ services:
     build: .
     restart: unless-stopped
     environment:
-      PRINTER_ID: Paperless_Printer2 # ID (No spaces)
-      PRINTER_NAME: Paperless Printer2 # Name of printer
-      HOSTNAME: '192.168.123.251:631' # Use static IP (below) or hostname if you have one
+      PRINTER_ID: Paperless_Printer3 # ID (No spaces)
+      PRINTER_NAME: Paperless Printer3 # Name of printer
+      HOSTNAME: '192.168.123.252:631' # Use static IP (below) or hostname if you have one
       OUTPUT_SUBPATH: 'vprint' # Subpath in /mnt/output/
     networks:
       - cups-vlan
@@ -23,5 +23,5 @@ networks:
     ipam:
       config:
         - subnet: "192.168.123.0/24"
-          ip_range: "192.168.123.251/32" #static IP
+          ip_range: "192.168.123.252/32" #static IP
           gateway: "192.168.123.1"
